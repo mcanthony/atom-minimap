@@ -126,7 +126,7 @@ class MinimapElement extends HTMLElement
   # `displayMinimapOnLeft` setting.
   attach: (parent) ->
     return if @attached
-    (parent ? @getTextEditorElementRoot()).appendChild(this)
+    (parent ? @getTextEditorElementRoot()).querySelector('.editor-contents--private').appendChild(this)
 
   # Detaches the {MinimapElement} from the DOM.
   detach: ->
